@@ -194,10 +194,10 @@ my_dir=$(dirname "$0")
 if test "x$TOOLSET" = x; then
   guessed_toolset=`$my_dir/tools/build/src/engine/build.sh --guess-toolset`
   case $guessed_toolset in
-    acc | darwin | gcc | como | mipspro | pathscale | pgi | qcc | vacpp )
+    acc | clang | darwin | gcc | como | mipspro | pathscale | pgi | qcc | vacpp )
     TOOLSET=$guessed_toolset
     ;;
-    
+
     intel-* )
     TOOLSET=intel
     ;;
